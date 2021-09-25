@@ -5,6 +5,7 @@ Change Log
 
 ##### Changes
 * Updated to version 1.5 of the i-UR ADE. (just changing schema location from kantei.go.jp to chisou.go.jp)
+* Updated iur-ade-citygml4j to 1.5.
 
 ### 1.5.0 - 2021-04-30
 
