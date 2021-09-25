@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:uro="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:luse="http://www.opengis.net/citygml/landuse/2.0" xmlns:bldg="http://www.opengis.net/citygml/building/2.0" xmlns:tran="http://www.opengis.net/citygml/transportation/2.0" xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" targetNamespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4">
+<xs:schema xmlns:uro="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:luse="http://www.opengis.net/citygml/landuse/2.0" xmlns:bldg="http://www.opengis.net/citygml/building/2.0" xmlns:tran="http://www.opengis.net/citygml/transportation/2.0" xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" targetNamespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.5">
 	<xs:annotation>
 		<xs:documentation>XML Schema for Urban Object module</xs:documentation>
+		<xs:documentation>Updated on 2021/04/01</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="../../schemas/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" schemaLocation="../../schemas/citygml/2.0.0/cityGMLBase.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/transportation/2.0" schemaLocation="../../schemas/citygml/2.0.0/transportation.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/building/2.0" schemaLocation="../../schemas/citygml/2.0.0/building.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/landuse/2.0" schemaLocation="../../schemas/citygml/2.0.0/landUse.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/cityobjectgroup/2.0" schemaLocation="../../schemas/citygml/2.0.0/cityObjectGroup.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/2.0" schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/transportation/2.0" schemaLocation="http://schemas.opengis.net/citygml/transportation/2.0/transportation.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/building/2.0" schemaLocation="http://schemas.opengis.net/citygml/building/2.0/building.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/landuse/2.0" schemaLocation="http://schemas.opengis.net/citygml/landuse/2.0/landUse.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/cityobjectgroup/2.0" schemaLocation="http://schemas.opengis.net/citygml/cityobjectgroup/2.0/cityObjectGroup.xsd"/>
 	<!-- =================== Extended attribute for Building ================== -->
-	<xs:element name="buildingDetails" type="uro:BuildingDetailsPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="buildingDetails" type="uro:BuildingDetailsPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
 	<xs:element name="BuildingDetails" type="uro:BuildingDetailsType"/>
 	<xs:complexType name="BuildingDetailsType">
 		<xs:sequence>
@@ -46,13 +41,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="largeCustomerFacilities" type="uro:LargeCustomerFacilitiesPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="largeCustomerFacilities" type="uro:LargeCustomerFacilitiesPropertyType" substitutionGroup="bldg:_GenericApplicationPropertyOfAbstractBuilding"/>
 	<!-- ===================================================================== -->
 	<xs:element name="LargeCustomerFacilities" type="uro:LargeCustomerFacilitiesType"/>
 	<xs:complexType name="LargeCustomerFacilitiesType">
@@ -108,126 +97,24 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- ==================== Extended attribute for Land Use =============== -->
-	<xs:element name="nominalArea" type="gml:MeasureType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="ownerType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="owner" type="xs:string" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="areaInSquareMeter" type="gml:MeasureType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="areaInHa" type="gml:MeasureType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="urbanPlanType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="districtsAndZonesType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="landUsePlanType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="areaClassificationType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="prefecture" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="city" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="reference" type="xs:string" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="note" type="xs:string" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="surveyYear" type="xs:gYear" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="nominalArea" type="gml:MeasureType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="ownerType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="owner" type="xs:string" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="areaInSquareMeter" type="gml:MeasureType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="areaInHa" type="gml:MeasureType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="urbanPlanType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="districtsAndZonesType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="landUsePlanType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="areaClassificationType" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="prefecture" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="city" type="gml:CodeType" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="reference" type="xs:string" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="note" type="xs:string" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
+	<xs:element name="surveyYear" type="xs:gYear" substitutionGroup="luse:_GenericApplicationPropertyOfLandUse"/>
 	<!-- ===================== Extended attribute for Road  ================= -->
-	<xs:element name="width" type="gml:LengthType" substitutionGroup="tran:_GenericApplicationPropertyOfRoad">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="widthType" type="gml:CodeType" substitutionGroup="tran:_GenericApplicationPropertyOfRoad">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="trafficVolume" type="uro:TrafficVolumePropertyType" substitutionGroup="tran:_GenericApplicationPropertyOfRoad">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="width" type="gml:LengthType" substitutionGroup="tran:_GenericApplicationPropertyOfRoad"/>
+	<xs:element name="widthType" type="gml:CodeType" substitutionGroup="tran:_GenericApplicationPropertyOfRoad"/>
+	<xs:element name="trafficVolume" type="uro:TrafficVolumePropertyType" substitutionGroup="tran:_GenericApplicationPropertyOfRoad"/>
 	<!-- ===================================================================== -->
 	<xs:element name="TrafficVolume" type="uro:TrafficVolumeType"/>
 	<xs:complexType name="TrafficVolumeType">
@@ -253,18 +140,6 @@
 		</xs:sequence>
 	</xs:complexType>
 	<!-- =================== Extended attribute for CityObjectGroup ================= -->
-	<xs:element name="fiscalYearOfPublication" type="xs:gYear" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="language" type="gml:CodeType" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="fiscalYearOfPublication" type="xs:gYear" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup"/>
+	<xs:element name="language" type="gml:CodeType" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup"/>
 </xs:schema>

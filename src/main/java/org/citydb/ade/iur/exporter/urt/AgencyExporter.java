@@ -58,7 +58,7 @@ public class AgencyExporter implements PublicTransitModuleExporter {
     public AgencyExporter(Connection connection, CityGMLExportHelper helper, ExportManager manager) throws CityGMLExportException, SQLException {
         String tableName = manager.getSchemaMapper().getTableName(ADETable.AGENCY);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = StatisticalGridModule.v1_4.getNamespaceURI();
+        module = StatisticalGridModule.v1_5.getNamespaceURI();
 
         publicTransitExporter = manager.getExporter(PublicTransitExporter.class);
 

@@ -65,7 +65,7 @@ public class StatisticalGridExporter implements StatisticalGridModuleExporter {
 
         String tableName = manager.getSchemaMapper().getTableName(ADETable.STATISTICALGRID);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = UrbanFunctionModule.v1_4.getNamespaceURI();
+        module = UrbanFunctionModule.v1_5.getNamespaceURI();
 
         Table table = new Table(helper.getTableNameWithSchema(tableName));
         Select select = addProjection(new Select(), table, projectionFilter, "")
@@ -175,7 +175,7 @@ public class StatisticalGridExporter implements StatisticalGridModuleExporter {
         if (projectionFilter.containsProperty("value", module)) {
             try {
                 for (SplitValue splitValue : valueSplitter.split(rs.getString(prefix + "value"))) {
-                    String value = "<urg:value xmlns:urg=\"" + StatisticalGridModule.v1_4.getNamespaceURI() + "\">" +
+                    String value = "<urg:value xmlns:urg=\"" + StatisticalGridModule.v1_5.getNamespaceURI() + "\">" +
                             splitValue.result(0) + "</urg:value>";
                     statisticalGrid.getValues().add(manager.unmarshal(value));
                 }

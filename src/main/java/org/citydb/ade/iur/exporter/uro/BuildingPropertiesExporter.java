@@ -57,7 +57,7 @@ public class BuildingPropertiesExporter implements UrbanObjectModuleExporter {
     public BuildingPropertiesExporter(Connection connection, CityGMLExportHelper helper, ExportManager manager) throws CityGMLExportException, SQLException {
         String tableName = manager.getSchemaMapper().getTableName(ADETable.BUILDING);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = UrbanObjectModule.v1_4.getNamespaceURI();
+        module = UrbanObjectModule.v1_5.getNamespaceURI();
 
         Table table = new Table(helper.getTableNameWithSchema(tableName));
         Select select = new Select().addProjection(table.getColumns("buildingdetails_id", "largecustomerfacilities_id"));

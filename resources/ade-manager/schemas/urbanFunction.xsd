@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:urf="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urf/1.4" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" targetNamespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urf/1.4" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4">
+<xs:schema xmlns:urf="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urf/1.5" xmlns:core="http://www.opengis.net/citygml/2.0" xmlns:grp="http://www.opengis.net/citygml/cityobjectgroup/2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" targetNamespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urf/1.5" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.5">
 	<xs:annotation>
 		<xs:documentation>XML Schema for Urban Function module</xs:documentation>
+		<xs:documentation>Updated on 2021/04/01</xs:documentation>
 	</xs:annotation>
-	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="../../schemas/gml/3.1.1/base/gml.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/2.0" schemaLocation="../../schemas/citygml/2.0.0/cityGMLBase.xsd"/>
-	<xs:import namespace="http://www.opengis.net/citygml/cityobjectgroup/2.0" schemaLocation="../../schemas/citygml/2.0.0/cityObjectGroup.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/2.0" schemaLocation="http://schemas.opengis.net/citygml/2.0/cityGMLBase.xsd"/>
+	<xs:import namespace="http://www.opengis.net/citygml/cityobjectgroup/2.0" schemaLocation="http://schemas.opengis.net/citygml/cityobjectgroup/2.0/cityObjectGroup.xsd"/>
 	<!-- ===================================================================== -->
 	<!-- ====================== CityGML UrbanFunction module ================= -->
 	<!-- ===================================================================== -->
@@ -81,13 +82,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="Administration" type="urf:AdministrationType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="Administration" type="urf:AdministrationType" substitutionGroup="urf:_UrbanFunction"/>
 	<!-- ===================================================================== -->
 	<xs:complexType name="ZoneType" abstract="true">
 		<xs:annotation>
@@ -111,13 +106,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="LandUsePlan" type="urf:LandUsePlanType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="LandUsePlan" type="urf:LandUsePlanType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="LandUsePlanPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:LandUsePlan"/>
@@ -136,13 +125,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="UrbanPlan" type="urf:UrbanPlanType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="UrbanPlan" type="urf:UrbanPlanType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="UrbanPlanPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:UrbanPlan"/>
@@ -162,13 +145,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="Agreement" type="urf:AgreementType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="Agreement" type="urf:AgreementType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="AgreementPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:Agreement"/>
@@ -184,13 +161,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="Regulation" type="urf:RegulationType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="Regulation" type="urf:RegulationType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="RegulationPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:Regulation"/>
@@ -206,13 +177,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="AreaClassification" type="urf:AreaClassificationType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="AreaClassification" type="urf:AreaClassificationType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="AreaClassificationPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:AreaClassification"/>
@@ -228,13 +193,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="DistrictsAndZones" type="urf:DistrictsAndZonesType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="DistrictsAndZones" type="urf:DistrictsAndZonesType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="DistrictsAndZonesPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:DistrictsAndZones"/>
@@ -261,13 +220,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="DevelopmentProject" type="urf:DevelopmentProjectType" substitutionGroup="urf:_Zone">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="DevelopmentProject" type="urf:DevelopmentProjectType" substitutionGroup="urf:_Zone"/>
 	<xs:complexType name="DevelopmentProjectPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:DevelopmentProject"/>
@@ -293,13 +246,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="CensusBlock" type="urf:CensusBlockType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="CensusBlock" type="urf:CensusBlockType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="CensusBlockPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:CensusBlock"/>
@@ -335,13 +282,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="DisasterDamage" type="urf:DisasterDamageType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="DisasterDamage" type="urf:DisasterDamageType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="DisasterDamagePropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:DisasterDamage"/>
@@ -363,13 +304,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="Pollution" type="urf:PollutionType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="Pollution" type="urf:PollutionType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="PollutionPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:Pollution"/>
@@ -387,13 +322,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="DisasterPreventionBase" type="urf:DisasterPreventionBaseType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="DisasterPreventionBase" type="urf:DisasterPreventionBaseType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="DisasterPreventionBasePropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:DisasterPreventionBase"/>
@@ -412,13 +341,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="Recreations" type="urf:RecreationsType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="Recreations" type="urf:RecreationsType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="RecreationsPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:Recreations"/>
@@ -434,13 +357,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="HubCity" type="urf:HubCityType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="HubCity" type="urf:HubCityType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="HubCityPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:HubCity"/>
@@ -456,13 +373,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="LandUseDiversion" type="urf:LandUseDiversionType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="LandUseDiversion" type="urf:LandUseDiversionType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="LandUseDiversionPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:LandUseDiversion"/>
@@ -481,13 +392,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="Urbanization" type="urf:UrbanizationType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="Urbanization" type="urf:UrbanizationType" substitutionGroup="urf:_UrbanFunction"/>
 	<xs:complexType name="UrbanizationPropertyType">
 		<xs:sequence minOccurs="0">
 			<xs:element ref="urf:Urbanization"/>
@@ -509,13 +414,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 	<!-- ===================================================================== -->
-	<xs:element name="PublicTransportationFacility" type="urf:PublicTransportationFacilityType" substitutionGroup="urf:_UrbanFunction">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="topLevel">true</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="PublicTransportationFacility" type="urf:PublicTransportationFacilityType" substitutionGroup="urf:_UrbanFunction"/>
 	<!-- ===================================================================== -->
 	<xs:complexType name="PublicTransportationFacilityPropertyType">
 		<xs:sequence minOccurs="0">
@@ -524,18 +423,6 @@
 		<xs:attributeGroup ref="gml:AssociationAttributeGroup"/>
 	</xs:complexType>
 	<!-- =================== Extended attribute for CityObjectGroup ================= -->
-	<xs:element name="fiscalYearOfPublication" type="xs:gYear" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
-	<xs:element name="language" type="gml:CodeType" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup">
-		<xs:annotation>
-			<xs:appinfo>
-				<taggedValue tag="maxOccurs">1</taggedValue>
-			</xs:appinfo>
-		</xs:annotation>
-	</xs:element>
+	<xs:element name="fiscalYearOfPublication" type="xs:gYear" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup"/>
+	<xs:element name="language" type="gml:CodeType" substitutionGroup="grp:_GenericApplicationPropertyOfCityObjectGroup"/>
 </xs:schema>

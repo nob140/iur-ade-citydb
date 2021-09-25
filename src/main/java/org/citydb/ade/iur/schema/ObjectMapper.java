@@ -65,9 +65,9 @@ public class ObjectMapper implements ADEObjectMapper {
                     objectClassIds.put(LandPrice.class, objectClassId);
                     break;
                 case "LandUseDiversion":
-                    if (type.getSchema().matchesNamespaceURI(StatisticalGridModule.v1_4.getNamespaceURI()))
+                    if (type.getSchema().matchesNamespaceURI(StatisticalGridModule.v1_5.getNamespaceURI()))
                         objectClassIds.put(LandUseDiversion.class, objectClassId);
-                    else if (type.getSchema().matchesNamespaceURI(UrbanFunctionModule.v1_4.getNamespaceURI()))
+                    else if (type.getSchema().matchesNamespaceURI(UrbanFunctionModule.v1_5.getNamespaceURI()))
                         objectClassIds.put(org.citygml4j.ade.iur.model.urf.LandUseDiversion.class, objectClassId);
                     break;
                 case "Households":

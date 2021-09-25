@@ -76,7 +76,7 @@ public class UrbanFunctionExporter implements UrbanFunctionModuleExporter {
 
         String tableName = manager.getSchemaMapper().getTableName(ADETable.URBANFUNCTION);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = UrbanFunctionModule.v1_4.getNamespaceURI();
+        module = UrbanFunctionModule.v1_5.getNamespaceURI();
 
         Table table = new Table(helper.getTableNameWithSchema(tableName));
         Select select = addProjection(new Select(), table, projectionFilter, "")

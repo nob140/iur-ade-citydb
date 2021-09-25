@@ -53,7 +53,7 @@ public class LandUsePropertiesExporter implements UrbanObjectModuleExporter {
 
     public LandUsePropertiesExporter(Connection connection, CityGMLExportHelper helper, ExportManager manager) throws CityGMLExportException, SQLException {
         String tableName = manager.getSchemaMapper().getTableName(ADETable.LAND_USE);
-        module = UrbanObjectModule.v1_4.getNamespaceURI();
+        module = UrbanObjectModule.v1_5.getNamespaceURI();
 
         Table table = new Table(helper.getTableNameWithSchema(tableName));
         Select select = new Select().addProjection(table.getColumns("areaclassification_codespace", "areaclassificationtype",

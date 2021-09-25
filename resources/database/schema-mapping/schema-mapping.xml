@@ -2,22 +2,22 @@
 <schemaMapping xmlns="http://www.3dcitydb.org/database/schema/1.0">
     <metadata>
         <name>i-UR ADE</name>
-        <version>1.4</version>
+        <version>1.5</version>
         <description>i-UR ADE</description>
         <dbPrefix>ur</dbPrefix>
     </metadata>
     <applicationSchemas>
         <schema id="ur_0" isADERoot="true">
-            <namespace context="citygml-2.0">http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urg/1.4</namespace>
+            <namespace context="citygml-2.0">https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urg/1.5</namespace>
         </schema>
         <schema id="ur_1" isADERoot="true">
-            <namespace context="citygml-2.0">http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4</namespace>
+            <namespace context="citygml-2.0">https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5</namespace>
         </schema>
         <schema id="ur_2" isADERoot="true">
-            <namespace context="citygml-2.0">http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urf/1.4</namespace>
+            <namespace context="citygml-2.0">https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urf/1.5</namespace>
         </schema>
         <schema id="ur_3" isADERoot="true">
-            <namespace context="citygml-2.0">http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urt/1.4</namespace>
+            <namespace context="citygml-2.0">https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urt/1.5</namespace>
         </schema>
     </applicationSchemas>
     <complexTypes>

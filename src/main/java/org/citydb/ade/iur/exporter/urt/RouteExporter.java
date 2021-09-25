@@ -66,7 +66,7 @@ public class RouteExporter implements PublicTransitModuleExporter {
 
         String tableName = manager.getSchemaMapper().getTableName(ADETable.ROUTE);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = StatisticalGridModule.v1_4.getNamespaceURI();
+        module = StatisticalGridModule.v1_5.getNamespaceURI();
 
         publicTransitExporter = manager.getExporter(PublicTransitExporter.class);
         gmlConverter = helper.getGMLConverter();

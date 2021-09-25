@@ -57,7 +57,7 @@ public class CalendarDateExporter implements PublicTransitModuleExporter {
     public CalendarDateExporter(Connection connection, CityGMLExportHelper helper, ExportManager manager) throws CityGMLExportException, SQLException {
         String tableName = manager.getSchemaMapper().getTableName(ADETable.CALENDARDATE);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = StatisticalGridModule.v1_4.getNamespaceURI();
+        module = StatisticalGridModule.v1_5.getNamespaceURI();
 
         publicTransitExporter = manager.getExporter(PublicTransitExporter.class);
 

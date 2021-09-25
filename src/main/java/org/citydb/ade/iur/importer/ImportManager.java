@@ -93,7 +93,7 @@ public class ImportManager implements ADEImportManager {
 
     @Override
     public void importObject(ADEModelObject object, long objectId, AbstractObjectType<?> objectType, ForeignKeys foreignKeys) throws CityGMLImportException, SQLException {
-        if (UrbanFunctionModule.v1_4.getModelPackageName().equals(object.getClass().getPackage().getName())) {
+        if (UrbanFunctionModule.v1_5.getModelPackageName().equals(object.getClass().getPackage().getName())) {
             if (object instanceof CensusBlock)
                 getImporter(CensusBlockImporter.class).doImport((CensusBlock) object, objectId, objectType, foreignKeys);
             else if (object instanceof DevelopmentProject)
@@ -112,7 +112,7 @@ public class ImportManager implements ADEImportManager {
                 getImporter(ZoneImporter.class).doImport((Zone) object, objectId, objectType, foreignKeys);
             else if (object instanceof UrbanFunction)
                 getImporter(UrbanFunctionImporter.class).doImport((UrbanFunction) object, objectId, objectType, foreignKeys);
-        } else if (StatisticalGridModule.v1_4.getModelPackageName().equals(object.getClass().getPackage().getName())) {
+        } else if (StatisticalGridModule.v1_5.getModelPackageName().equals(object.getClass().getPackage().getName())) {
             if (object instanceof Households)
                 getImporter(HouseholdsImporter.class).doImport((Households) object, objectId, objectType, foreignKeys);
             else if (object instanceof LandPrice)
@@ -125,7 +125,7 @@ public class ImportManager implements ADEImportManager {
                 getImporter(PopulationImporter.class).doImport((Population) object, objectId, objectType, foreignKeys);
             else if (object instanceof StatisticalGrid)
                 getImporter(StatisticalGridImporter.class).doImport((StatisticalGrid) object, objectId, objectType, foreignKeys);
-        } else if (PublicTransitModule.v1_4.getModelPackageName().equals(object.getClass().getPackage().getName())) {
+        } else if (PublicTransitModule.v1_5.getModelPackageName().equals(object.getClass().getPackage().getName())) {
             if (object instanceof Agency)
                 getImporter(AgencyImporter.class).doImport((Agency) object, objectId, objectType, foreignKeys);
             else if (object instanceof Attribution)

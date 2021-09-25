@@ -66,7 +66,7 @@ public class CityObjectGroupPropertiesExporter implements PublicTransitModuleExp
         this.objectMapper = manager.getObjectMapper();
 
         String tableName = manager.getSchemaMapper().getTableName(ADETable.PUBLICTRANSITDATATYPE);
-        module = PublicTransitModule.v1_4.getNamespaceURI();
+        module = PublicTransitModule.v1_5.getNamespaceURI();
 
         Table table = new Table(helper.getTableNameWithSchema(tableName));
         Select select = new Select().addProjection(table.getColumns("id", "objectclass_id"))

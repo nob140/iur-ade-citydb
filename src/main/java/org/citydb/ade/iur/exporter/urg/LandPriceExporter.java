@@ -60,7 +60,7 @@ public class LandPriceExporter implements StatisticalGridModuleExporter {
     public LandPriceExporter(Connection connection, CityGMLExportHelper helper, ExportManager manager) throws CityGMLExportException, SQLException {
         String tableName = manager.getSchemaMapper().getTableName(ADETable.LANDPRICE);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = StatisticalGridModule.v1_4.getNamespaceURI();
+        module = StatisticalGridModule.v1_5.getNamespaceURI();
 
         statisticalGridExporter = manager.getExporter(StatisticalGridExporter.class);
 

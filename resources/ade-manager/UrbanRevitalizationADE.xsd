@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/1.4" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/1.4" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.4">
-  <xs:import namespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urg/1.4" schemaLocation="schemas/statisticalGrid.xsd"/>
-  <xs:import namespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/uro/1.4" schemaLocation="schemas/urbanObject.xsd"/>
-  <xs:import namespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urf/1.4" schemaLocation="schemas/urbanFunction.xsd"/>
-  <xs:import namespace="http://www.kantei.go.jp/jp/singi/tiiki/toshisaisei/itoshisaisei/iur/urt/1.4" schemaLocation="schemas/publicTransit.xsd"/>
+<xs:schema xmlns="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/1.5" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/1.5" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.5">
+  <xs:import namespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urg/1.5" schemaLocation="schemas/statisticalGrid.xsd"/>
+  <xs:import namespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/uro/1.5" schemaLocation="schemas/urbanObject.xsd"/>
+  <xs:import namespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urf/1.5" schemaLocation="schemas/urbanFunction.xsd"/>
+  <xs:import namespace="https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/urt/1.5" schemaLocation="schemas/publicTransit.xsd"/>
 </xs:schema>

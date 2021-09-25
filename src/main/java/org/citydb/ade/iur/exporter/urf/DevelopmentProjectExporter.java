@@ -58,7 +58,7 @@ public class DevelopmentProjectExporter implements UrbanFunctionModuleExporter {
     public DevelopmentProjectExporter(Connection connection, CityGMLExportHelper helper, ExportManager manager) throws CityGMLExportException, SQLException {
         String tableName = manager.getSchemaMapper().getTableName(ADETable.DEVELOPMENTPROJECT);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = UrbanFunctionModule.v1_4.getNamespaceURI();
+        module = UrbanFunctionModule.v1_5.getNamespaceURI();
 
         urbanFunctionExporter = manager.getExporter(UrbanFunctionExporter.class);
 

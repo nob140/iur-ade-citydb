@@ -60,7 +60,7 @@ public class PublicTransitExporter implements PublicTransitModuleExporter {
 
         String tableName = manager.getSchemaMapper().getTableName(ADETable.PUBLICTRANSIT);
         CombinedProjectionFilter projectionFilter = helper.getCombinedProjectionFilter(tableName);
-        module = UrbanFunctionModule.v1_4.getNamespaceURI();
+        module = UrbanFunctionModule.v1_5.getNamespaceURI();
 
         Table table = new Table(helper.getTableNameWithSchema(tableName));
         Select select = addProjection(new Select(), table, projectionFilter, "")

@@ -95,7 +95,7 @@ public class ExportManager implements ADEExportManager {
 
     @Override
     public void exportObject(ADEModelObject object, long objectId, AbstractObjectType<?> objectType, ProjectionFilter projectionFilter) throws CityGMLExportException, SQLException {
-        if (UrbanFunctionModule.v1_4.getModelPackageName().equals(object.getClass().getPackage().getName())) {
+        if (UrbanFunctionModule.v1_5.getModelPackageName().equals(object.getClass().getPackage().getName())) {
             if (object instanceof CensusBlock)
                 getExporter(CensusBlockExporter.class).doExport((CensusBlock) object, objectId, objectType, projectionFilter);
             else if (object instanceof DisasterDamage)
@@ -116,7 +116,7 @@ public class ExportManager implements ADEExportManager {
                 getExporter(ZoneExporter.class).doExport((Zone) object, objectId, objectType, projectionFilter);
             else if (object instanceof UrbanFunction)
                 getExporter(UrbanFunctionExporter.class).doExport((UrbanFunction) object, objectId, objectType, projectionFilter);
-        } else if (StatisticalGridModule.v1_4.getModelPackageName().equals(object.getClass().getPackage().getName())) {
+        } else if (StatisticalGridModule.v1_5.getModelPackageName().equals(object.getClass().getPackage().getName())) {
             if (object instanceof GenericGridCell)
                 getExporter(GenericGridCellExporter.class).doExport((GenericGridCell) object, objectId, objectType, projectionFilter);
             else if (object instanceof Households)
@@ -131,7 +131,7 @@ public class ExportManager implements ADEExportManager {
                 getExporter(PopulationExporter.class).doExport((Population) object, objectId, objectType, projectionFilter);
             else if (object instanceof PublicTransitAccessibility)
                 getExporter(PublicTransitAccessibilityExporter.class).doExport((PublicTransitAccessibility) object, objectId, objectType, projectionFilter);
-        } else if (PublicTransitModule.v1_4.getModelPackageName().equals(object.getClass().getPackage().getName())) {
+        } else if (PublicTransitModule.v1_5.getModelPackageName().equals(object.getClass().getPackage().getName())) {
             if (object instanceof Agency)
                 getExporter(AgencyExporter.class).doExport((Agency) object, objectId, objectType, projectionFilter);
             else if (object instanceof Attribution)
